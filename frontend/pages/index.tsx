@@ -53,7 +53,7 @@ export default function Home({ allBikesData } :any) {
           <div>
             <h2 className={styles.title}>バイク一覧</h2>
             <div className={styles.bike_index}>
-              {allBikesData.map(({name, price, maker,id}) => (
+              {allBikesData.map(({name, price, maker,id}:{id: string, price: number, maker: string, name: string}) => (
                 <article className={styles.article}>
                   <Link href={`/bike/${id}`}>
                     <a >

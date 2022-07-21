@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from '../../styles/show.module.css'
 import utilStyles from '../../styles/utils.module.css'
-import { getPostData, getAllBikeIds}  from "../../lib/bike";
+import { getBikeData, getAllBikeIds}  from "../../lib/bike";
 
 export async function getStaticPaths() {
 	const paths = await getAllBikeIds();
@@ -14,15 +14,17 @@ export async function getStaticPaths() {
 	}
 }
 
-// export async function getStaticProps({params}) {
-// 	const bikeData = await getPostData(params.id);
+export async function getStaticProps({params}) {
+	const res = await getBikeData(params.id);
+	const bikeData = res.params.json;
 
-// 	return {
-// 		props: {
-// 			bikeData,
-// 		},
-// 	};
-// }
+
+	return {
+		props: {
+			bikeData,
+		},
+	};
+}
 
 export default function Bike({bikeData}) {
 	return (
@@ -38,7 +40,7 @@ export default function Bike({bikeData}) {
 						<div className={`${styles.price_area}`}>
 							<p > 
 								(税込)　
-								<span className={`${utilStyles.font_bold} ${utilStyles.font_big}`}>800,000</span>
+								<span className={`${utilStyles.font_bold} ${utilStyles.font_big}`}>{bikeData.price}</span>
 								　円
 							</p>
 							<p>
