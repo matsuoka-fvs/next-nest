@@ -1,0 +1,13 @@
+.header{
+	background-color: blue;
+	padding: 0.5rem 1rem;
+}
+
+.header_inner{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.title{
+	color: white;
+}

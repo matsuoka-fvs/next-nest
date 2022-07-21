@@ -1,0 +1,32 @@
+.main_inner{
+	display: flex;
+}
+
+.title{
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.bike_index{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1000px;
+	flex-wrap: wrap;
+}
+
+.side_menue{
+	width: 20%;
+	padding: 3rem 1rem;
+}
+
+.article{
+	border: 1px solid lightgray;
+	width: 24%;
+	margin-top: 1rem;
+	background-color: white;
+	padding: 1rem 0.8rem;
+}
+
+.bike_img{
+	width: 100%;
+}

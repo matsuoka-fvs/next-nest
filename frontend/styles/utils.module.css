@@ -1,0 +1,19 @@
+.heading2xl{
+	font-size: 2rem;
+}
+
+.font_small{
+	font-size: 0.7rem;
+}
+
+.font_normal{
+	font-size: 1rem;
+}
+
+.font_big{
+	font-size: 1.5rem;
+}
+
+.font_bold{
+	font-weight: bold;
+}
